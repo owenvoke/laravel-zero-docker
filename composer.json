@@ -1,0 +1,40 @@
+{
+    "name": "owenvoke/laravel-zero-docker",
+    "type": "library",
+    "description": "A Laravel Zero command to generate a Dockerfile using Box",
+    "license": "MIT",
+    "require": {
+        "php": "^7.3 || ^8.0",
+        "laravel-zero/framework": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.4",
+        "pestphp/pest": "^0.3.10",
+        "phpstan/phpstan": "^0.12.53",
+        "rector/rector-prefixed": "0.8.48",
+        "symfony/var-dumper": "^5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "OwenVoke\\LaravelZeroDocker\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "OwenVoke\\LaravelZeroDocker\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test:types": "phpstan analyse --ansi --memory-limit=0",
+        "test:unit": "pest --colors=always",
+        "test": [
+            "@test:types",
+            "@test:unit"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
