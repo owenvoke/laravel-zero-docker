@@ -11,7 +11,6 @@
         "orchestra/testbench": "^6.4",
         "pestphp/pest": "^1.0",
         "phpstan/phpstan": "^0.12.66",
-        "rector/rector-prefixed": "0.8.48",
         "symfony/var-dumper": "^5.1"
     },
     "autoload": {
