@@ -9,7 +9,7 @@
     },
     "require-dev": {
         "orchestra/testbench": "^6.4",
-        "pestphp/pest": "^0.3.10",
+        "pestphp/pest": "^1.0",
         "phpstan/phpstan": "^0.12.53",
         "rector/rector-prefixed": "0.8.48",
         "symfony/var-dumper": "^5.1"
