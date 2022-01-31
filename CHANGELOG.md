@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 ## Unreleased
 
+## v1.1.0 - 2022-01-31
+
+### Changed
+- Update to only support Laravel Zero 9.x ([#2](https://github.com/owenvoke/laravel-zero-docker/pull/2))
+
 ## v1.0.0 - 2020-11-17
 
 ### Added
