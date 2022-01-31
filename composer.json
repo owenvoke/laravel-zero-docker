@@ -10,7 +10,7 @@
     "require-dev": {
         "orchestra/testbench": "^7.0",
         "pestphp/pest": "^1.21.1",
-        "phpstan/phpstan": "^1.4.3",
+        "nunomaduro/larastan": "^2.0",
         "symfony/var-dumper": "^6.0"
     },
     "autoload": {
