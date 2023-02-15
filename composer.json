@@ -4,14 +4,15 @@
     "description": "A Laravel Zero command to generate a Dockerfile using Box",
     "license": "MIT",
     "require": {
-        "php": "^8.0",
-        "laravel-zero/framework": "^9.0"
+        "php": "^8.1",
+        "laravel-zero/framework": "^10.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^7.0",
-        "pestphp/pest": "^1.21.1",
-        "nunomaduro/larastan": "^2.0",
-        "symfony/var-dumper": "^6.0"
+        "laravel/pint": "^1.5",
+        "nunomaduro/larastan": "^2.4",
+        "orchestra/testbench": "^7.22 || ^8.0",
+        "pestphp/pest": "^1.22.3",
+        "symfony/var-dumper": "^6.1"
     },
     "autoload": {
         "psr-4": {
@@ -24,9 +25,12 @@
         }
     },
     "scripts": {
+        "lint": "pint --ansi",
+        "test:lint": "pint --test --ansi",
         "test:types": "phpstan analyse --ansi --memory-limit=-1",
         "test:unit": "pest --colors=always",
         "test": [
+            "@test:lint",
             "@test:types",
             "@test:unit"
         ]

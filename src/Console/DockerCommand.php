@@ -33,13 +33,13 @@ final class DockerCommand extends Command
         if (! file_exists($boxBinary)) {
             $this->warn('  The Box binary could not be found');
 
-            return 1;
+            return self::FAILURE;
         }
 
         if (! file_exists($pharPath)) {
             $this->warn('  The compiled Phar binary could not be found in the `<options=bold>builds</>` path');
 
-            return 1;
+            return self::FAILURE;
         }
 
         $process = new Process(
@@ -51,8 +51,10 @@ final class DockerCommand extends Command
         );
 
         foreach (tap($process)->start() as $type => $data) {
+            assert(is_string($data));
+
             if ($this->output->getVerbosity() > OutputInterface::VERBOSITY_NORMAL) {
-                $process::OUT === $type ? $this->info("$data") : $this->error("$data");
+                $process::OUT === $type ? $this->info($data) : $this->error($data);
             }
         }
 
@@ -60,7 +62,7 @@ final class DockerCommand extends Command
             $this->info('  Successfully generated Dockerfile in the `<options=bold>builds</>` path');
         }
 
-        return $process->getExitCode() ?? 1;
+        return $process->getExitCode() ?? self::FAILURE;
     }
 
     private function getBinary(): string
