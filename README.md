@@ -79,7 +79,7 @@ Read more about Treeware at [treeware.earth][link-treeware].
 
 [link-packagist]: https://packagist.org/packages/owenvoke/laravel-zero-docker
 [link-github-actions]: https://github.com/owenvoke/laravel-zero-docker/actions
-[link-styleci]: https://styleci.io/repos/313560499
+[link-static-analysis]: https://github.com/owenvoke/laravel-zero-docker/actions/workflows/static.yml
 [link-downloads]: https://packagist.org/packages/owenvoke/laravel-zero-docker
 [link-treeware]: https://treeware.earth
 [link-treeware-gifting]: https://ecologi.com/owenvoke?gift-trees
