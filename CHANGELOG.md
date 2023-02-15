@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 ## Unreleased
 
+## v1.2.0 - 2023-02-15
+
+### Added
+- Add support for Laravel 10.x
+
+### Removed
+- Drop support for PHP 8.0
+- Drop support for Laravel Zero 9.x
+
 ## v1.1.0 - 2022-01-31
 
 ### Changed
